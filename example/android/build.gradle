@@ -49,5 +49,8 @@ allprojects {
         }
         google()
         maven { url 'https://www.jitpack.io' }
+        // maven { url "https://jitpack.io"
+        //     credentials { username 'jp_c93d562a5jppjr6ti62upc0k3s' }
+        // }
     }
 }

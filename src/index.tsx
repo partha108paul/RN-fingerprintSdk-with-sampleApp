@@ -6,7 +6,9 @@ const LINKING_ERROR =
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo managed workflow\n';
 
-const Fingerprint = NativeModules.Fingerprint  ? NativeModules.Fingerprint  : new Proxy(
+const Fingerprint = NativeModules.Fingerprint
+  ? NativeModules.Fingerprint
+  : new Proxy(
       {},
       {
         get() {
@@ -17,4 +19,15 @@ const Fingerprint = NativeModules.Fingerprint  ? NativeModules.Fingerprint  : ne
 
 export function multiply(a: number, b: number): Promise<number> {
   return Fingerprint.multiply(a, b);
+  // return Fingerprint.submit
+}
+
+export function processBureauTest(
+  clientId: String,
+  sessionId: String,
+  userId: String = '',
+  flow: String = ''
+  // ): Promise<string> {
+) {
+  return Fingerprint.processBureauTest(clientId, sessionId, userId, flow);
 }
