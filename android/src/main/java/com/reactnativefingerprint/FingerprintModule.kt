@@ -60,13 +60,13 @@ class FingerprintModule(reactContext: ReactApplicationContext) :
     bureauAPI.submit(object :
       DataCallback {
       override fun onError(errorMessage: ErrorResponse) {
-        //promise.resolve("ERROR")
         Log.i("FINGERPRINT_REACT_SIREN", "Fail Hua $errorMessage")
+        promise.resolve("ERROR $errorMessage")
       }
 
       override fun onResult(message: SubmitResponse) {
-        //promise.resolve("SUCCESS")
         Log.i("FINGERPRINT_REACT_SIREN", "Success Hua")
+        promise.resolve("SUCCESS $message")
       }
     })
   }

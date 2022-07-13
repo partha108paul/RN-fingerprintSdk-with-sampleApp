@@ -27,7 +27,6 @@ export function processBureauTest(
   sessionId: String,
   userId: String = '',
   flow: String = ''
-  // ): Promise<string> {
-) {
+): Promise<string> {
   return Fingerprint.processBureauTest(clientId, sessionId, userId, flow);
 }

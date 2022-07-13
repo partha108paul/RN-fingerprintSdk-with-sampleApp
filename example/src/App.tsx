@@ -7,23 +7,22 @@ import { processBureauTest } from 'react-native-fingerprint';
 
 export default function App() {
   // const [result, setResult] = React.useState<number | undefined>();
-  // const [result, setResult] = React.useState<string | undefined>();
+  const [result, setResult] = React.useState<string | undefined>();
 
   React.useEffect(() => {
     // multiply(3, 7).then(setResult);
     processBureauTest(
       'e87cdd41-fbf3-4041-bf77-d248972204b0',
-      '8524ba97-827f-4bf1-a0ce-6a0410-888-c97-89-7c1',
+      '34645c68-1da5-4e25-9915-75459-58927fc',
       'Partha',
       ''
-      // ).then(setResult);
-    );
+    ).then(setResult);
   }, []);
 
   return (
     <View style={styles.container}>
-      <Text>Result: </Text>
-      {/* <Text>Result: {result}</Text> */}
+      {/* <Text>Result: </Text> */}
+      <Text>Result: {result}</Text>
 
       {/* <Button
         title="Submit Data"
